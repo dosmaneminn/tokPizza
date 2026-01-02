@@ -1,0 +1,301 @@
+/* =============================================
+   TOK PIZZA - DESIGN SYSTEM
+   Inspired by Franco Manca + AkamiSushi
+   ============================================= */
+
+/* ---------- CSS Variables ---------- */
+:root {
+  /* Colors - Franco Manca Inspired */
+  --color-cream: #F0EDE6;
+  --color-cream-dark: #E5E1D8;
+  --color-charcoal: #1D1D1B;
+  --color-charcoal-light: #2D2D2B;
+  --color-pizza-red: #C41E3A;
+  --color-pizza-red-dark: #A01830;
+  --color-deep-blue: #2B3B6B;
+  --color-gold: #C9A227;
+  --color-grey: #6B6B6B;
+  --color-grey-light: #9A9A9A;
+
+  /* Italian Flag Colors */
+  --color-italy-green: #009246;
+  --color-italy-white: #FFFFFF;
+  --color-italy-red: #CE2B37;
+
+  /* Typography */
+  --font-display: 'Lobster Two', cursive;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Courier Prime', 'Courier New', monospace;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.16);
+
+  /* Franco Manca special - Asymmetric radius */
+  --radius-asymmetric: 0 40px 0 40px;
+  --radius-asymmetric-reverse: 40px 0 40px 0;
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-charcoal);
+  background-color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-charcoal);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-grey);
+}
+
+/* Typewriter style for descriptions - Franco Manca inspired */
+.text-mono {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-pizza-red);
+}
+
+/* ---------- Utility Classes ---------- */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.section {
+  padding: var(--space-xl) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.accent-text {
+  color: var(--color-pizza-red);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-asymmetric);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  min-width: 200px;
+}
+
+.btn-primary {
+  background-color: var(--color-pizza-red);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-pizza-red-dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-charcoal);
+  border: 2px solid var(--color-charcoal);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-charcoal);
+  color: var(--color-cream);
+}
+
+.btn-outline--light {
+  border-color: var(--color-cream);
+  color: var(--color-cream);
+}
+
+.btn-outline--light:hover {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+/* ---------- Cards with asymmetric radius ---------- */
+.card-asymmetric {
+  border-radius: var(--radius-asymmetric);
+  overflow: hidden;
+}
+
+.card-asymmetric-reverse {
+  border-radius: var(--radius-asymmetric-reverse);
+  overflow: hidden;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background-color: var(--color-pizza-red);
+  color: white;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-grey);
+}
+
+/* ---------- Numbered list style (Franco Manca) ---------- */
+.numbered-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.numbered-item__number {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-grey-light);
+  min-width: 40px;
+}
+
+.numbered-item__content h4 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.numbered-item__content p {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--color-grey);
+}

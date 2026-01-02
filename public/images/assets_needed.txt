@@ -1,0 +1,11 @@
+Lütfen aşağıdaki görselleri bu klasöre (public/images) yükleyin. İsimlendirmelere dikkat ederseniz site otomatik olarak bunları algılayacaktır.
+
+1. **hero-bg.jpg**: Ana sayfa en üstte gözükecek büyük, iştah açıcı pizza fotoğrafı. (Yatay format, yüksek kalite)
+2. **about-bg.jpg**: Hakkımızda/Hikayemiz kısmı için fotoğraf (Mekan içi, fırın başı vb.)
+3. **menu-1.jpg**: Popüler pizza 1
+4. **menu-2.jpg**: Popüler pizza 2
+5. **menu-3.jpg**: Popüler pizza 3
+6. **gallery-1.jpg** ... **gallery-6.jpg**: Alt kısımdaki galeri için kare formatta 6 adet "lifestyle" veya detay fotoğrafı.
+7. **logo.png**: Tok Pizza logosu (Mümkünse transparan arkaplanlı)
+
+Not: Siz bunları yükleyene kadar ben geçici görseller kullanacağım.
